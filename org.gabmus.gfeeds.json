@@ -2,7 +2,7 @@
     "app-id" : "org.gabmus.gfeeds",
     "command" : "gfeeds",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.32",
+    "runtime-version" : "3.34",
     "sdk" : "org.gnome.Sdk",
     "finish-args" : [
     	"--device=dri",
@@ -26,8 +26,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.10/libhandy-v0.0.10.tar.gz",
-                    "sha256" : "9f4528c07bdb9796300ff0efb165cdc48cfcd7f28952c9d776de15b735844981"
+                    "url" : "https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.11/libhandy-v0.0.11.tar.gz",
+                    "sha256" : "c7e7b51203d9221c50b1a38ba81e0aefb5ab906c55e85b6ca2d0501e907e077d"
                 }
             ]
         },
@@ -765,8 +765,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.com/gabmus/gnome-feeds/-/archive/0.9/gnome-feeds-0.9.tar.gz",
-                    "sha256" : "d3249e19eb434a40388cf27046555aec585c0a72395658ef20f5e81dca51a1ca"
+                    "url" : "https://gitlab.gnome.org/World/gfeeds/-/archive/0.10/gfeeds-0.10.tar.gz",
+                    "sha256" : "1423c523117d844e88d7564433550f93ed068a6fe50c2f85f50dc8f0edc464a2"
                 }
             ]
         }

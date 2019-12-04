@@ -10,7 +10,7 @@
         "--socket=x11",
         "--share=network",
         "--socket=wayland",
-        "--talk-name=org.gnome.SettingsDaemon",
+        "--socket=pulseaudio",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf",
@@ -624,8 +624,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/python-pillow/Pillow/archive/6.1.0.tar.gz",
-                    "sha256" : "9a3a613e7780362605b10765274389b3e9a6fe3201dd2bceeb422d45c5c9ba18"
+                    "url" : "https://github.com/python-pillow/Pillow/archive/6.2.1.tar.gz",
+                    "sha256" : "7bf2d6bdb68fa6ccec15c0fd9aa20fac9641cd20dc6079344f5a6534e13a70f9"
                 },
                 {
                     "type" : "shell",
@@ -765,8 +765,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/gfeeds/-/archive/0.11/gfeeds-0.11.tar.gz",
-                    "sha256" : "7f6cc30158f682154e2eed19f4766a7e8b9e21a8db5372e2fd7128d565e147e3"
+                    "url" : "https://gitlab.gnome.org/World/gfeeds/-/archive/0.12/gfeeds-0.12.tar.gz",
+                    "sha256" : "f957e9a8f7482396198b64eab0b833f1a98062ae5f96712d71215f14ac6cd43d"
                 }
             ]
         }

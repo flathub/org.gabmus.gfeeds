@@ -353,7 +353,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/psf/requests",
-                    "tag": "v2.24.0"
+                    "commit": "0797c61fd541f92f66e409dbf9515ca287af28d2"
                 },
                 {
                     "type": "shell",

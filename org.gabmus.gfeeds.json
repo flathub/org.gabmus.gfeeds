@@ -14,7 +14,8 @@
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--talk-name=org.freedesktop.Flatpak"
     ],
     "modules": [
         {
@@ -27,7 +28,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/libhandy",
-                    "tag": "1.0.0"
+                    "tag": "1.0.2"
                 }
             ]
         },
@@ -664,7 +665,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/gfeeds",
-                    "tag": "0.16.1"
+                    "tag": "0.16.2"
                 }
             ]
         }

@@ -390,6 +390,20 @@
             ]
         },
         {
+            "name": "python-sgmllib3k",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} sgmllib3k"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz",
+                    "sha256": "7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9"
+                }
+            ]
+        },
+        {
             "name": "python-feedparser",
             "buildsystem": "simple",
             "ensure-writable": [
@@ -405,13 +419,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/kurtmckee/feedparser",
-                    "commit": "7e255f06b7ace0a286c4ae311969e51fb1ddfd1c"
-                },
-                {
-                    "type": "shell",
-                    "commands": [
-                        "sed -i '46i_SGML_AVAILABLE = 0\\; sgmllib = None\\; charref = None\\; tagfind = None\\; attrfind = None\\; entityref = None\\; incomplete = None\\; interesting = None\\; shorttag = None\\; shorttagopen = None\\; starttagopen = None\\; endbracket = None' feedparser/sgml.py"
-                    ]
+                    "tag": "6.0.2",
+                    "commit": "e13bb55cbd3ecbf98cf70a5cf7112d3d5b02b413"
                 }
             ]
         },

@@ -2,7 +2,7 @@
     "app-id": "org.gabmus.gfeeds",
     "command": "gfeeds",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "finish-args": [
         "--device=dri",
@@ -24,7 +24,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/libhandy",
-                    "tag": "1.0.2"
+                    "tag": "1.5.0"
                 }
             ]
         },
@@ -46,8 +46,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/6c/9f/f501ba9d178aeb1f5bf7da1ad5619b207c90ac235d9859961c11829d0160/Cython-0.29.21.tar.gz",
-                    "sha256": "e57acb89bd55943c8d8bf813763d20b9099cc7165c0f16b707631a7654be9cad"
+                    "url": "https://files.pythonhosted.org/packages/09/45/10c39337ba73c38a798165f97e4798827a532eaac71071842cbe0ee13dc5/Cython-0.29.25.tar.gz",
+                    "sha256": "a87cbe3756e7c464acf3e9420d8741e62d3b2eace0846cb39f664ad378aab284"
                 }
             ]
         },
@@ -80,8 +80,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/f4/f6/94fee50f4d54f58637d4b9987a1b862aeb6cd969e73623e02c5c00755577/pytz-2020.1.tar.gz",
-                    "sha256": "c35965d010ce31b23eeb663ed3cc8c906275d6be1a34393a1d73a41febf4a048"
+                    "url": "https://files.pythonhosted.org/packages/e3/8e/1cde9d002f48a940b9d9d38820aaf444b229450c0854bdf15305ce4a3d1a/pytz-2021.3.tar.gz",
+                    "sha256": "acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326"
                 },
                 {
                     "type": "shell",
@@ -111,7 +111,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/pypa/setuptools_scm",
-                    "tag": "v4.1.2"
+                    "tag": "v6.3.2"
                 },
                 {
                     "type": "shell",
@@ -137,8 +137,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/dateutil/dateutil",
-                    "tag": "2.8.1",
-                    "commit": "fc9b1625ebc729f01e449879b6b140abd12ae621"
+                    "tag": "2.8.2",
+                    "commit": "6b035517571e63b6a63a493740c5506ec1e5da44"
                 },
                 {
                     "type": "shell",
@@ -165,7 +165,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/lxml/lxml",
-                    "tag": "lxml-4.5.2"
+                    "tag": "lxml-4.7.1"
                 },
                 {
                     "type": "shell",
@@ -191,7 +191,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/kjd/idna",
-                    "tag": "v2.10"
+                    "tag": "v3.3"
                 },
                 {
                     "type": "shell",
@@ -243,7 +243,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/certifi/python-certifi",
-                    "tag": "2020.06.20"
+                    "tag": "2021.10.08"
                 },
                 {
                     "type": "shell",
@@ -269,8 +269,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/chardet/chardet",
-                    "tag": "3.0.4",
-                    "commit": "9b8c5c2fb118d76c6beeab9affd01c332732a530"
+                    "tag": "4.0.0",
+                    "commit": "a808ed1c945293c0edeeda3a360abfa2a0b25a20"
                 },
                 {
                     "type": "shell",
@@ -296,7 +296,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/urllib3/urllib3",
-                    "tag": "1.25.10"
+                    "tag": "1.26.7"
                 },
                 {
                     "type": "shell",
@@ -321,8 +321,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/psf/requests/archive/v2.24.0.tar.gz",
-                    "sha256": "904e9a2bd22e98e444f5b23f80fa3fb8dda5d1e81d0f87d9ee56af2e15f73862"
+                    "url": "https://github.com/psf/requests/archive/v2.26.0.tar.gz",
+                    "sha256": "e88b61425a0b4f1316e7ab8f6c11d7abbc99b464e418786681d59fef9f9d6421"
                 },
                 {
                     "type": "shell",
@@ -401,7 +401,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/kurtmckee/feedparser",
-                    "commit": "7e255f06b7ace0a286c4ae311969e51fb1ddfd1c"
+                    "commit": "76f4533f67eea7bfa989b08dce524491aeeccb46"
                 },
                 {
                     "type": "shell",
@@ -427,7 +427,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/python-pillow/Pillow",
-                    "tag": "7.2.0"
+                    "tag": "8.4.0"
                 },
                 {
                     "type": "shell",
@@ -453,8 +453,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/eliben/pycparser",
-                    "tag": "release_v2.20",
-                    "sha256": "0055facfb5b5289ce8ef2ef12b18e34a223f9d20"
+                    "tag": "release_v2.21"
                 },
                 {
                     "type": "shell",
@@ -479,8 +478,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/05/54/3324b0c46340c31b909fcec598696aaec7ddc8c18a63f2db352562d3354c/cffi-1.14.0.tar.gz",
-                    "sha256": "2d384f4a127a15ba701207f7639d94106693b6cd64173d6c8988e2c25f3ac2b6"
+                    "url": "https://files.pythonhosted.org/packages/00/9e/92de7e1217ccc3d5f352ba21e52398372525765b2e0c4530e6eb2ba9282a/cffi-1.15.0.tar.gz",
+                    "sha256": "920f0d66a896c2d99f0adbb391f990a84091179542c205fa53ce5787aff87954"
                 },
                 {
                     "type": "shell",
@@ -506,8 +505,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/python-hyper/brotlipy",
-                    "tag": "v0.7.0",
-                    "commit": "da3be6051386791ea7f5372230caecc2328262ff"
+                    "tag": "v1.0.9.2",
+                    "commit": "de7ee050f809448735f0f05a6379383b8cf4554f"
                 },
                 {
                     "type": "shell",
@@ -586,8 +585,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/pygments/pygments",
-                    "tag": "2.6.1",
-                    "commit": "d2eae8580d7e363bca03554e3b516d0fd77b25cb"
+                    "tag": "2.10.0",
+                    "commit": "a821b896d702a81d61c7fbbd8bf582946759cfb8"
                 },
                 {
                     "type": "shell",
@@ -613,8 +612,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/pallets/markupsafe",
-                    "tag": "1.1.1",
-                    "commit": "22c946de28c2f5916f8c88a983a3e48e1cdbd2fd"
+                    "tag": "2.0.1",
+                    "commit": "7666dffd690186973f03b6feccb4773e5b505c29"
                 },
                 {
                     "type": "shell",
@@ -639,8 +638,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/c6/62/8a2bef01214eeaa5a4489eca7104e152968729512ee33cb5fbbc37a896b7/beautifulsoup4-4.9.1.tar.gz",
-                    "sha256": "73cc4d115b96f79c7d77c1c7f7a0a8d4c57860d1041df407dd1aae7f07a77fd7"
+                    "url": "https://files.pythonhosted.org/packages/a1/69/daeee6d8f22c997e522cdbeb59641c4d31ab120aba0f2c799500f7456b7e/beautifulsoup4-4.10.0.tar.gz",
+                    "sha256": "c23ad23c521d818955a4151a67d81580319d4bf548d3d49f4223ae041ff98891"
                 },
                 {
                     "type": "shell",

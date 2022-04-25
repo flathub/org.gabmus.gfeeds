@@ -57,7 +57,6 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                    "branch": "main",
                     "commit": "e3a37893a8709aa3d6a571ecb5a3f690da0ef82d"
                 }
             ]
@@ -74,7 +73,6 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/gabmus/syndication-domination",
-                    "branch": "master",
                     "commit": "e503361944ae8f8af5fe281aa61a346f28a0b051"
                 }
             ],

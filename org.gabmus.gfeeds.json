@@ -2,9 +2,8 @@
     "app-id": "org.gabmus.gfeeds",
     "command": "gfeeds",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
-    "sdk-version": "42",
     "finish-args": [
         "--device=dri",
         "--share=ipc",
@@ -18,8 +17,13 @@
         "--filesystem=xdg-config/fontconfig",
         "--persist=xdg-config/fontconfig"
     ],
+    "cleanup": [
+        "/lib/python3.10/site-packages/_pytest",
+        "/lib/python3.10/site-packages/pytest*",
+        "/bin/pytest",
+        "/bin/py.test"
+    ],
     "modules": [
-        "webkit.json",
         "python-deps.json",
         {
             "name": "python-lxml",
@@ -31,8 +35,19 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/lxml/lxml/releases/download/lxml-4.8.0/lxml-4.8.0.tar.gz",
-                    "sha256": "f63f62fc60e6228a4ca9abae28228f35e1bd3ce675013d1dfb828688d50c6e23"
+                    "url": "https://github.com/lxml/lxml/releases/download/lxml-4.9.1/lxml-4.9.1.tar.gz",
+                    "sha256": "fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f"
+                }
+            ]
+        },
+        {
+            "name": "blueprint-compiler",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.4.0/blueprint-compiler-v0.4.0.tar.gz",
+                    "sha256": "c1a5efd8562aca7df259679c6d9cd067ea2a78372069fcc01985619ec3963d8f"
                 }
             ]
         },
@@ -45,19 +60,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/pygments/pygments/archive/refs/tags/2.11.2.tar.gz",
-                    "sha256": "2ff53b96fae81588e6f4f9147cb45af7d321c67335e5d794f6838f1710154598"
-                }
-            ]
-        },
-        {
-            "name": "blueprint-compiler",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                    "commit": "3d4aae79c49751d57a075a8b94f0dc96ac0d5b2f"
+                    "url": "https://github.com/pygments/pygments/archive/refs/tags/2.13.0.tar.gz",
+                    "sha256": "15a76f8c2c47f6931bf5ce22e40ee0636b8f72f371d8693210b4b85fe99d535a"
                 }
             ]
         },
@@ -73,23 +77,37 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/gabmus/syndication-domination",
-                    "commit": "db659181314428cb2cbb8567fe6eedc9f69b7f2d"
+                    "commit": "9055e8c0e1be24d01bf9ea916fc61c6ac03baf75"
                 }
             ],
             "modules": [
                 {
-                    "name": "pybind11",
-                    "buildsystem": "cmake",
+                    "name": "boost",
+                    "buildsystem": "simple",
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/pybind/pybind11/archive/refs/tags/v2.9.2.tar.gz",
-                            "sha256": "6bd528c4dbe2276635dc787b6b1f2e5316cf6b49ee3e150264e455a0d68d19c1"
-                        },
+                            "url": "https://downloads.sourceforge.net/boost/boost/1.80.0/boost_1_80_0.tar.bz2",
+                            "sha256": "1e19565d82e43bc59209a168f5ac899d3ba471d55c7610c677d4ccf2c9c500c0"
+                        }
+                    ],
+                    "build-commands": [
+                        "./bootstrap.sh --prefix=/app --with-libraries=locale,filesystem,system,date_time,regex,program_options",
+                        "./b2 headers",
+                        "./b2 -j$FLATPAK_BUILDER_N_JOBS install variant=release cxxstd=17 --layout=system"
+                    ]
+                },
+                {
+                    "name": "pybind11",
+                    "buildsystem": "cmake",
+                    "config-opts": [
+                        "-DBUILD_TESTING=false"
+                    ],
+                    "sources": [
                         {
-                            "type": "patch",
-                            "path": "pybind11_flatpak_fix.patch",
-                            "sha256": "6c16ce22e230064fedd15b7b68d2bed8a4ecae69f544acaa2f01b43428a4d968"
+                            "type": "archive",
+                            "url": "https://github.com/pybind/pybind11/archive/refs/tags/v2.10.0.tar.gz",
+                            "sha256": "eacf582fa8f696227988d08cfc46121770823839fe9e301a20fbce67e7cd70ec"
                         }
                     ]
                 },
@@ -103,13 +121,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/pybind/pybind11/archive/refs/tags/v2.9.2.tar.gz",
-                            "sha256": "6bd528c4dbe2276635dc787b6b1f2e5316cf6b49ee3e150264e455a0d68d19c1"
-                        },
-                        {
-                            "type": "patch",
-                            "path": "pybind11_flatpak_fix.patch",
-                            "sha256": "6c16ce22e230064fedd15b7b68d2bed8a4ecae69f544acaa2f01b43428a4d968"
+                            "url": "https://github.com/pybind/pybind11/archive/refs/tags/v2.10.0.tar.gz",
+                            "sha256": "eacf582fa8f696227988d08cfc46121770823839fe9e301a20fbce67e7cd70ec"
                         }
                     ]
                 },
@@ -134,6 +147,20 @@
                             "tag": "5.8.0"
                         }
                     ]
+                },
+                {
+                    "name": "fmt",
+                    "buildsystem": "cmake",
+                    "config-opts": [
+                        "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/fmtlib/fmt/archive/refs/tags/9.1.0.tar.gz",
+                            "sha256": "5dea48d1fcddc3ec571ce2058e13910a0d4a6bab4cc09a809d8b1dd1c88ae6f2"
+                        }
+                    ]
                 }
             ]
         },
@@ -147,7 +174,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/gfeeds",
-                    "tag": "1.0.3"
+                    "tag": "2.0.0"
                 }
             ]
         }

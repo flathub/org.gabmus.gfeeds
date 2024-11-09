@@ -11,11 +11,7 @@
         "--share=network",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--talk-name=org.freedesktop.Flatpak",
-        "--filesystem=xdg-data/fonts",
-        "--persist=xdg-data/fonts",
-        "--filesystem=xdg-config/fontconfig",
-        "--persist=xdg-config/fontconfig"
+        "--talk-name=org.freedesktop.Flatpak"
     ],
     "cleanup": [
         "/lib/python3.10/site-packages/_pytest",

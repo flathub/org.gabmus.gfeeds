@@ -1,0 +1,66 @@
+From 3d3e22d4cbb1325068b53bd3a6141fb3771fc71a Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Sat, 9 Nov 2024 14:19:25 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+- Fix appdata issues.
+---
+ data/org.gabmus.gfeeds.appdata.xml.in | 33 ++-------------------------------
+ 1 file changed, 2 insertions(+), 31 deletions(-)
+
+diff --git a/data/org.gabmus.gfeeds.appdata.xml.in b/data/org.gabmus.gfeeds.appdata.xml.in
+index 2ef524b..55810f9 100644
+--- a/data/org.gabmus.gfeeds.appdata.xml.in
++++ b/data/org.gabmus.gfeeds.appdata.xml.in
+@@ -49,8 +49,8 @@
+     </screenshots>
+     <url type="homepage">https://gfeeds.gabmus.org</url>
+     <url type="bugtracker">https://gitlab.gnome.org/World/gfeeds/-/issues</url>
++    <url type="vcs-browser">https://gfeeds.gabmus.org</url>
+     <url type="translate">https://gitlab.gnome.org/World/gfeeds/-/tree/master/po</url>
+-    <url type="donation">https://liberapay.com/gabmus/donate</url>
+     <update_contact>gabmus@disroot.org</update_contact>
+     <releases>
+ <release version="2.2.0" date="2023-03-25">
+@@ -415,37 +415,8 @@
+             </description>
+         </release>
+     </releases>
+-    <content_rating type="oars-1.1">
+-    <content_attribute id="violence-cartoon">none</content_attribute>
+-    <content_attribute id="violence-fantasy">none</content_attribute>
+-    <content_attribute id="violence-realistic">none</content_attribute>
+-    <content_attribute id="violence-bloodshed">none</content_attribute>
+-    <content_attribute id="violence-sexual">none</content_attribute>
+-    <content_attribute id="violence-desecration">none</content_attribute>
+-    <content_attribute id="violence-slavery">none</content_attribute>
+-    <content_attribute id="violence-worship">none</content_attribute>
+-    <content_attribute id="drugs-alcohol">none</content_attribute>
+-    <content_attribute id="drugs-narcotics">none</content_attribute>
+-    <content_attribute id="drugs-tobacco">none</content_attribute>
+-    <content_attribute id="sex-nudity">none</content_attribute>
+-    <content_attribute id="sex-themes">none</content_attribute>
+-    <content_attribute id="sex-homosexuality">none</content_attribute>
+-    <content_attribute id="sex-prostitution">none</content_attribute>
+-    <content_attribute id="sex-adultery">none</content_attribute>
+-    <content_attribute id="sex-appearance">none</content_attribute>
+-    <content_attribute id="language-profanity">none</content_attribute>
+-    <content_attribute id="language-humor">none</content_attribute>
+-    <content_attribute id="language-discrimination">none</content_attribute>
+-    <content_attribute id="social-chat">none</content_attribute>
+-    <content_attribute id="social-info">none</content_attribute>
+-    <content_attribute id="social-audio">none</content_attribute>
+-    <content_attribute id="social-location">none</content_attribute>
+-    <content_attribute id="social-contacts">none</content_attribute>
+-    <content_attribute id="money-purchasing">none</content_attribute>
+-    <content_attribute id="money-gambling">none</content_attribute>
+-  </content_rating>
++    <content_rating type="oars-1.1"/>
+   <custom>
+-    <value key="Purism::form_factor">workstation</value>
+     <value key="Purism::form_factor">mobile</value>
+   </custom>
+ </component>
+--
+libgit2 1.7.2
+

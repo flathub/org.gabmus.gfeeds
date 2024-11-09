@@ -172,9 +172,13 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/World/gfeeds",
-                    "tag": "2.2.0"
+                    "type": "archive",
+                    "url": "https://gitlab.gnome.org/World/gfeeds/-/archive/2.2.0/gfeeds-2.2.0.tar.gz",
+                    "sha256": "13a3e99acbb0ee29389673fc0c9f9de69c29b6574acb848103ef0c5653a78b45"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-appdata.patch"
                 }
             ]
         }

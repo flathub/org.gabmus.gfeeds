@@ -2,7 +2,7 @@
     "app-id": "org.gabmus.gfeeds",
     "command": "gfeeds",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
     "finish-args": [
         "--device=dri",
@@ -14,8 +14,8 @@
         "--talk-name=org.freedesktop.Flatpak"
     ],
     "cleanup": [
-        "/lib/python3.10/site-packages/_pytest",
-        "/lib/python3.10/site-packages/pytest*",
+        "/lib/python3.*/site-packages/_pytest",
+        "/lib/python3.*/site-packages/pytest*",
         "/bin/pytest",
         "/bin/py.test"
 
